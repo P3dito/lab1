@@ -167,7 +167,9 @@ body {
 }
 
 .product-pack-link:hover {
-  color: var(--product-pack-hover);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .view-icon {
@@ -181,7 +183,7 @@ body {
 
 .product-pack-link:hover .view-icon {
   opacity: 1;
-  color: var(--product-pack-hover);
+  color: white;
   transform: translateX(2px);
 }
 
