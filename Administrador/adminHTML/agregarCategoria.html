@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Categoría</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../adminCss/agregarCategoria.css">
+</head>
+<body>
+    <div class="container">
+        <form id="categoryForm" novalidate>
+            <div class="form-group">
+                <label for="categoryName">Nombre de la Categoría</label>
+                <input 
+                    type="text" 
+                    id="categoryName" 
+                    name="categoryName" 
+                    placeholder="Ingrese el nombre de la categoría" 
+                    required 
+                    minlength="3" 
+                    maxlength="50"
+                >
+                <div class="error-message" id="categoryNameError">
+                    Por favor, ingrese un nombre de categoría válido (mín. 3 caracteres)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="categoryDescription">Descripción</label>
+                <textarea 
+                    id="categoryDescription" 
+                    name="categoryDescription" 
+                    placeholder="Ingrese la descripción de la categoría" 
+                    rows="4" 
+                    required 
+                    minlength="10" 
+                    maxlength="500"
+                ></textarea>
+                <div class="error-message" id="categoryDescriptionError">
+                    Por favor, ingrese una descripción válida (mín. 10 caracteres)
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit" class="btn boton2">AGREGAR</button>
+                <button type="button" class="btn btn-secondary boton" id="cancelBtn">CANCELAR</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../adminJs/agregarCategoria.js"></script>
+       
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Categorías</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../adminCss/categoria.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="#" class="back-link"><i class="fas fa-arrow-left"></i></a>
+            <a href="#">Inicio</a>
+            <span class="separator">></span>
+            <span class="current">categorías</span>
+        </nav>
+        <style>
+          
+
+          
+        </style>
+        <div class="content-box">
+            <div class="header">
+                <div class="title-section">
+                    <h1>Administración de Categorías</h1>
+                    <p class="subtitle">Gestiona las categorías de productos de tu tienda</p>
+                </div>
+                <button class="add-button">
+                    <i class="fas fa-plus"></i>
+                    Agregar Categoría
+                </button>
+            </div>
+
+            <div class="search-filter">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Buscar categorías...">
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-button">
+                        <i class="fas fa-filter"></i>
+                        Estado: Todos
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                            <th>Productos</th>
+                            <th>Fecha de Creación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="name-cell">
+                                <span class="color-dot red"></span>
+                                Jeans
+                            </td>
+                            <td>Productos a base de denim.</td>
+                            <td><span class="status active">Activo</span></td>
+                            <td>24</td>
+                            <td>4 feb 2023</td>
+                            <td class="actions">
+                                <button class="action-btn edit"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name-cell">
+                                <span class="color-dot green"></span>
+                                Polo
+                            </td>
+                            <td>Productos de algodón</td>
+                            <td><span class="status active">Activo</span></td>
+                            <td>42</td>
+                            <td>16 jul 2024</td>
+                            <td class="actions">
+                                <button class="action-btn edit"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name-cell">
+                                <span class="color-dot blue"></span>
+                                Camisa
+                            </td>
+                            <td>Artículos para el hogar y decoración</td>
+                            <td><span class="status inactive">Inactivo</span></td>
+                            <td>15</td>
+                            <td>1 abr 2025</td>
+                            <td class="actions">
+                                <button class="action-btn edit"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
