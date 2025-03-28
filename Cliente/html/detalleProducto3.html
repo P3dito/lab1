@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SHOP.CO - Descubre</title>
+    <title>SHOP.CO - Detalle de Producto</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,8 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../css/productos.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/detalleProducto.css" />
   </head>
   <body>
     <header class="sticky-top">
@@ -49,7 +50,11 @@
           <div
             class="d-lg-none ms-auto d-flex align-items-center navbar-nav-icons-mobile"
           >
-            <a href="#" class="nav-link px-2" aria-label="Carrito de compras">
+            <a
+              href="carrito.html"
+              class="nav-link px-2"
+              aria-label="Carrito de compras"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -93,17 +98,12 @@
                 id="categoriesDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                onclick="event.preventDefault()"
               >
                 Categorías
               </a>
               <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-                <li>
-                  <a class="dropdown-item" href="#">Polos</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Jeans</a>
-                </li>
+                <li><a class="dropdown-item" href="#">Polos</a></li>
+                <li><a class="dropdown-item" href="#">Jeans</a></li>
               </ul>
             </div>
 
@@ -124,7 +124,11 @@
             </div>
 
             <div class="nav-icons-desktop">
-              <a href="#" class="cart-link" aria-label="Carrito de compras">
+              <a
+                href="carrito.html"
+                class="cart-link"
+                aria-label="Carrito de compras"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -217,307 +221,115 @@
       </div>
     </header>
 
-    <main class="main-content">
-      <h1 class="page-title">DESCUBRE</h1>
-      <p class="product-count">Mostrando 1-16 de 100 Productos</p>
-
-      <div class="row gy-4 product-row">
-        <div class="col-6 col-lg-3">
-          <a
-            href="../html/detalleProducto2.html"
-            class="product-card-link"
-            style="text-decoration: none"
-          >
-            <div class="product-card">
-              <div class="product-image-container">
-                <img
-                  src="https://phbrands.pe/cdn/shop/files/Indigo_540x-removebg-preview.png?v=1708445591&width=310"
-                  alt="T-shirt Indigo"
-                />
-              </div>
-              <div class="product-info">
-                <h3>T-shirt Indigo Details</h3>
-                <p class="price">S/120</p>
-              </div>
-            </div>
-          </a>
+    <main class="product-detail-container">
+      <div class="product-detail-row">
+        <div class="product-image-col">
+          <img
+            src="https://phbrands.pe/cdn/shop/files/White2_540x-removebg-preview.png?v=1708445757&width=310"
+            alt="Polo Manga Corta Hombre"
+            class="product-main-image"
+          />
         </div>
 
-        <div class="col-6 col-lg-3">
-          <a
-            href="../html/detalleProducto3.html"
-            class="product-card-link"
-            style="text-decoration: none"
-          >
-            <div class="product-card">
-              <div class="product-image-container">
-                <img
-                  src="https://phbrands.pe/cdn/shop/files/White2_540x-removebg-preview.png?v=1708445757&width=310"
-                  alt="T-shirt Blanca"
-                />
-              </div>
-              <div class="product-info">
-                <h3>T-shirt Básica Blanca</h3>
-                <p class="price">S/180</p>
-              </div>
-            </div>
-          </a>
-        </div>
+        <div class="product-info-col">
+          <h1 class="product-title">T-shirt Básica Blanca</h1>
+          <p class="product-price">S/180</p>
+          <p class="product-description">
+            Disfruta de la comodidad y estilo con el T-shirt Básica Blanca.
+            Confeccionado en 100% algodón, este polo te brinda una sensación
+            suave y fresca ideal para los días de primavera-verano. Su diseño
+            liso en color negro te ofrece versatilidad para combinar con tus
+            prendas favoritas y crear looks casuales.
+          </p>
 
-        <div class="col-6 col-lg-3">
-          <a
-            href="../html/detalleProducto.html"
-            class="product-card-link"
-            style="text-decoration: none"
-          >
-            <div class="product-card">
-              <div class="product-image-container">
-                <img
-                  src="https://jackjonesmadrid.com/cdn/shop/files/MW2EMLXBkkUEN_001_preview_grande.png?v=1727413636"
-                  alt="Polo Manga Larga"
-                />
-              </div>
-              <div class="product-info">
-                <h3>Polo Manga Corta Hombre</h3>
-                <p class="price">S/130</p>
-              </div>
+          <div class="add-to-cart-container">
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <span class="quantity">1</span>
+              <button class="quantity-btn plus">+</button>
             </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a
-            href="../html/detalleProducto4.html"
-            class="product-card-link"
-            style="text-decoration: none"
-          >
-            <div class="product-card">
-              <div class="product-image-container">
-                <img
-                  src="https://s.alicdn.com/@sc04/kf/HTB1gNw4KFXXXXaIXFXX760XFXXXa.png_720x720q50.png"
-                  alt="Polo Verde Texturizado"
-                />
-              </div>
-              <div class="product-info">
-                <h3>Polo Verde Texturizado</h3>
-                <p class="price">S/240</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://saxdepartment.com/storage/images/thumbnails/16987612999jc2NuW3.png"
-                alt="Polo Marrón Básico"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Polo Marrón Básico</h3>
-              <p class="price">S/115</p>
-            </div>
+            <button class="add-to-cart-btn">+ Añadir al carrito</button>
           </div>
-        </div>
 
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="	https://dotacioneslatina.com/wp-content/uploads/2023/02/Camisas-tipo-polo_gris-1.webp"
-                alt="T-shirt Gris Jaspeado"
-              />
-            </div>
-            <div class="product-info">
-              <h3>T-shirt Gris Jaspeado</h3>
-              <p class="price">S/175</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://hugobosspeprod.vtexassets.com/arquivos/ids/203199/50468576-740_1.png?v=638554957734830000"
-                alt="Polo Amarillo Estampado"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Polo Amarillo Estampado</h3>
-              <p class="price">S/140</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="	https://saxdepartment.com/storage/images/products/1716992505OlTTn30D.png"
-                alt="Polo Azul Marino Cuello V"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Polo Azul Marino Cuello V</h3>
-              <p class="price">S/230</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://www.coes.co.uk/cdn/shop/products/AC100161.webp?v=1681839077"
-                alt="Slim Fit Jeans"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Slim Fit Jeans Azules</h3>
-              <p class="price">S/210</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://img.vitkac.com/uploads/product_thumb/SPODNIE%20AMDNSM1008%200-097/up/1.png"
-                alt="Ripped Jeans Negros"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Ripped Jeans Negros</h3>
-              <p class="price">S/250</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://www.coes.co.uk/cdn/shop/products/AC100161.webp?v=1681839077"
-                alt="Mom Jeans Claros"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Mom Jeans Claros</h3>
-              <p class="price">S/190</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="	https://img.vitkac.com/uploads/product_thumb/SPODNIE%202016%20D-AIR%20A03618%2009I88-01/up/1.png"
-                alt="Straight Leg Jeans Oscuros"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Straight Leg Jeans Oscuros</h3>
-              <p class="price">S/200</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://www.coes.co.uk/cdn/shop/products/AC100161.webp?v=1681839077"
-                alt="Light Wash Skinny Jeans"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Light Wash Skinny Jeans</h3>
-              <p class="price">S/220</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://www.coes.co.uk/cdn/shop/products/AC100161.webp?v=1681839077"
-                alt="Jeans Blancos Corte Recto"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Jeans Blancos Corte Recto</h3>
-              <p class="price">S/235</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://droledemonsieur.com/cdn/shop/files/E-BP164-CO123-GY-01.webp?v=1722604890&width=2048"
-                alt="Jeans Grises Desgastados"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Jeans Grises Desgastados</h3>
-              <p class="price">S/205</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://www.coes.co.uk/cdn/shop/products/AC100161.webp?v=1681839077"
-                alt="Cargo Jeans Azul Acero"
-              />
-            </div>
-            <div class="product-info">
-              <h3>Cargo Jeans Azul Acero</h3>
-              <p class="price">S/260</p>
-            </div>
+          <div class="product-details">
+            <h3>Detalles del producto</h3>
+            <ul>
+              <li>Material: 100% algodón</li>
+              <li>Color: Blanca</li>
+              <li>Tipo de manga: Corta</li>
+              <li>Estilo: Casual</li>
+              <li>Diseño: Liso</li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div class="pagination-container">
-        <nav aria-label="Paginación de productos">
-          <ul class="pagination">
-            <li class="page-item disabled">
-              <a
-                class="page-link prev"
-                href="#"
-                aria-label="Anterior"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                <span class="arrow">←</span> Antes
-              </a>
-            </li>
-            <li class="page-item active" aria-current="page">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item d-none d-sm-inline-block">
-              <span class="page-dots">..</span>
-            </li>
-            <li class="page-item d-none d-sm-inline-block">
-              <a class="page-link" href="#">8</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link next" href="#" aria-label="Siguiente">
-                Siguiente <span class="arrow">→</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div class="similar-products-section">
+        <h2 class="similar-products-title">
+          MAS OPCIONES <span class="text-primary">SIMILARES</span>
+        </h2>
+
+        <div class="row gy-4 product-row">
+          <div class="col-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img
+                  src="https://phbrands.pe/cdn/shop/files/Indigo_540x-removebg-preview.png?v=1708445591&width=310"
+                  alt="Polo camisero azul"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Polo camisero azul</h3>
+                <p class="price">S/90</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img
+                  src="https://saxdepartment.com/storage/images/thumbnails/16987612999jc2NuW3.png"
+                  alt="Polo Dragonx"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Polo Dragonx</h3>
+                <p class="price">S/70</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img
+                  src="https://hugobosspeprod.vtexassets.com/arquivos/ids/203199/50468576-740_1.png?v=638554957734830000"
+                  alt="Polo camisero rojo"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Polo camisero rojo</h3>
+                <p class="price">S/80</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img
+                  src="https://saxdepartment.com/storage/images/products/1716992505OlTTn30D.png"
+                  alt="Polo a rayas"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Polo a rayas</h3>
+                <p class="price">S/90</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -526,6 +338,7 @@
         <div class="row gy-4">
           <div class="col-12 col-lg-4 footer-col">
             <a href="#" class="footer-logo">SHOP.CO</a>
+
             <p>
               Tenemos ropa que se adapta a tu estilo y que te enorgullecerá
               llevar. Para mujer y hombre.
