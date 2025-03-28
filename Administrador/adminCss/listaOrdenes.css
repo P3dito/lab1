@@ -388,3 +388,8 @@ body {
     font-size: 14px;
   }
 }
+
+tr:hover td {
+  background: #479dc5;
+  transition: background-color 0.3s ease, background 0.3s ease; /* Animación suave */
+}
