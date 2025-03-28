@@ -1,24 +1,19 @@
-// Variables
 const dropZone = document.getElementById("dropZone");
 const fileInput = document.getElementById("fileInput");
 const fileInfo = document.getElementById("fileInfo");
 const fileName = document.getElementById("fileName");
 const fileProgressBar = document.getElementById("fileProgressBar");
 
-// Botones
 const updateBtn = document.getElementById("updateBtn");
 const deleteBtn = document.getElementById("deleteBtn");
 const cancelBtn = document.getElementById("cancelBtn");
 
-// Simular la carga inicial
 simulateUpload();
 
-// Evento para abrir el selector de archivos al hacer clic en la zona de drop
 dropZone.addEventListener("click", () => {
   fileInput.click();
 });
 
-// Prevenir comportamiento por defecto del navegador para drag and drop
 ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
   dropZone.addEventListener(eventName, preventDefaults, false);
 });
@@ -28,7 +23,6 @@ function preventDefaults(e) {
   e.stopPropagation();
 }
 
-// Resaltar la zona de drop cuando se arrastra un archivo sobre ella
 ["dragenter", "dragover"].forEach((eventName) => {
   dropZone.addEventListener(eventName, highlight, false);
 });
@@ -47,7 +41,6 @@ function unhighlight() {
   dropZone.style.backgroundColor = "";
 }
 
-// Manejar el archivo soltado
 dropZone.addEventListener("drop", handleDrop, false);
 fileInput.addEventListener("change", handleFiles, false);
 
@@ -62,14 +55,11 @@ function handleFiles(e) {
   if (files.length) {
     const file = files[0];
     if (file.type.match("image.*")) {
-      // Actualizar el nombre del archivo
       fileName.textContent = file.name;
 
-      // Reiniciar y simular la carga
       fileProgressBar.style.width = "0%";
       simulateUpload();
 
-      // Leer el archivo para la miniatura
       const reader = new FileReader();
       reader.onload = function (e) {
         document.querySelector(
@@ -97,7 +87,6 @@ function simulateUpload() {
   }, 50);
 }
 
-// Funcionalidad de los botones
 updateBtn.addEventListener("click", () => {
   alert("Producto actualizado correctamente");
 });

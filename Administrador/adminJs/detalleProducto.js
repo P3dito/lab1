@@ -1,21 +1,17 @@
-// Variables
 const dropZone = document.getElementById("dropZone");
 const fileInput = document.getElementById("fileInput");
 const imagePreview = document.getElementById("imagePreview");
 const fileInfo = document.getElementById("fileInfo");
 const fileName = document.getElementById("fileName");
 
-// Botones
 const updateBtn = document.getElementById("updateBtn");
 const deleteBtn = document.getElementById("deleteBtn");
 const cancelBtn = document.getElementById("cancelBtn");
 
-// Evento para abrir el selector de archivos al hacer clic en la zona de drop
 dropZone.addEventListener("click", () => {
   fileInput.click();
 });
 
-// Prevenir comportamiento por defecto del navegador para drag and drop
 ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
   dropZone.addEventListener(eventName, preventDefaults, false);
 });
@@ -25,7 +21,6 @@ function preventDefaults(e) {
   e.stopPropagation();
 }
 
-// Resaltar la zona de drop cuando se arrastra un archivo sobre ella
 ["dragenter", "dragover"].forEach((eventName) => {
   dropZone.addEventListener(eventName, highlight, false);
 });
@@ -44,7 +39,6 @@ function unhighlight() {
   dropZone.style.backgroundColor = "";
 }
 
-// Manejar el archivo soltado
 dropZone.addEventListener("drop", handleDrop, false);
 fileInput.addEventListener("change", handleFiles, false);
 
@@ -62,15 +56,12 @@ function handleFiles(e) {
       const reader = new FileReader();
 
       reader.onload = function (e) {
-        // Mostrar la vista previa
         imagePreview.src = e.target.result;
         imagePreview.style.display = "block";
 
-        // Mostrar la información del archivo
         fileInfo.style.display = "flex";
         fileName.textContent = file.name;
 
-        // Configurar la miniatura
         document.querySelector(
           ".file-thumbnail"
         ).style.backgroundImage = `url(${e.target.result})`;
@@ -79,7 +70,6 @@ function handleFiles(e) {
         document.querySelector(".file-thumbnail").style.backgroundPosition =
           "center";
 
-        // Simular la carga
         simulateUpload();
       };
 
@@ -103,7 +93,6 @@ function simulateUpload() {
   }, 50);
 }
 
-// Funcionalidad de los botones
 updateBtn.addEventListener("click", () => {
   alert("Producto actualizado correctamente");
 });
